@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <meta name="theme-color" content="#071a3d">
+  <meta name="description" content="Sayeed Academy — chapter-wise audio learning for Classes 6 to 10.">
+  <link rel="manifest" href="./manifest.webmanifest">
+  <link rel="icon" href="./assets/icons/logo.png">
+  <link rel="stylesheet" href="./assets/css/style.css">
+  <link rel="stylesheet" href="./assets/css/responsive.css">
+  <link rel="stylesheet" href="./assets/css/player.css">
+  <title>Sayeed Academy | Audio Learning</title>
+</head>
+<body>
+  <div id="app">
+    <header class="topbar">
+      <div class="brand" id="brandHome" role="button" tabindex="0" aria-label="Go to home">
+        <img src="./assets/icons/logo.png" alt="Sayeed Academy logo" class="brand-logo">
+        <div class="brand-copy">
+          <strong>Sayeed Academy</strong>
+          <span>Audio Learning</span>
+        </div>
+      </div>
+      <div class="top-actions">
+        <button class="icon-btn" id="themeBtn" title="Toggle theme" aria-label="Toggle theme">☾</button>
+        <button class="icon-btn mobile-menu-btn" id="menuBtn" title="Menu" aria-label="Open menu">☰</button>
+      </div>
+    </header>
+
+    <div class="layout">
+      <aside class="sidebar" id="sidebar">
+        <nav>
+          <button class="nav-item active" data-route="home">⌂ <span>Home</span></button>
+          <button class="nav-item" data-route="classes">▦ <span>Classes 6–10</span></button>
+          <button class="nav-item" data-route="favorites">★ <span>Favorites</span></button>
+          <button class="nav-item" data-route="history">◷ <span>Listening History</span></button>
+          <button class="nav-item" data-route="admin">⚙ <span>Content Manager</span></button>
+        </nav>
+        <div class="sidebar-note">
+          <span class="note-icon">🎧</span>
+          <strong>Listen. Learn. Revise.</strong>
+          <small>Short chapter summaries designed for quick revision.</small>
+        </div>
+      </aside>
+
+      <main class="main" id="main"></main>
+    </div>
+
+    <div id="miniPlayer" class="mini-player hidden"></div>
+    <div id="toast" class="toast" aria-live="polite"></div>
+  </div>
+
+  <script type="module" src="./assets/js/app.js"></script>
+</body>
+</html>
