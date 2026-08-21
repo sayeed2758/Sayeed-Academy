@@ -1,10 +1,10 @@
 {
-  "name": "Sayeed Academy Audio Learning Pro v5",
+  "name": "Sayeed Academy Audio Learning Pro",
   "short_name": "Sayeed Academy",
-  "start_url": "./?v=5",
+  "start_url": "./?v=6",
   "display": "standalone",
-  "background_color": "#06101f",
-  "theme_color": "#07152f",
+  "background_color": "#07101f",
+  "theme_color": "#0a1630",
   "icons": [
     {
       "src": "assets/icons/logo.png",
