@@ -1,1 +1,169 @@
-
+{
+  "version": "1.0.0",
+  "brand": "Sayeed Academy",
+  "classes": [
+    {
+      "id": "c6",
+      "name": "Class 6",
+      "subjects": [
+        {
+          "id": "c6-eng",
+          "name": "English",
+          "icon": "📘",
+          "chapters": [
+            {
+              "id": "c6-eng-1",
+              "number": 1,
+              "title": "Chapter 1 — Sample Audio Summary",
+              "summary": "A sample chapter entry. The final content and audio can be added from the Content Manager."
+            },
+            {
+              "id": "c6-eng-2",
+              "number": 2,
+              "title": "Chapter 2 — Sample Audio Summary",
+              "summary": "A sample chapter entry for testing navigation and the audio player."
+            }
+          ]
+        },
+        {
+          "id": "c6-math",
+          "name": "Mathematics",
+          "icon": "📐",
+          "chapters": []
+        },
+        {
+          "id": "c6-sci",
+          "name": "Science",
+          "icon": "🔬",
+          "chapters": []
+        },
+        {
+          "id": "c6-sst",
+          "name": "Social Science",
+          "icon": "🌍",
+          "chapters": []
+        }
+      ]
+    },
+    {
+      "id": "c7",
+      "name": "Class 7",
+      "subjects": [
+        {
+          "id": "c7-eng",
+          "name": "English",
+          "icon": "📘",
+          "chapters": []
+        },
+        {
+          "id": "c7-math",
+          "name": "Mathematics",
+          "icon": "📐",
+          "chapters": []
+        },
+        {
+          "id": "c7-sci",
+          "name": "Science",
+          "icon": "🔬",
+          "chapters": []
+        },
+        {
+          "id": "c7-sst",
+          "name": "Social Science",
+          "icon": "🌍",
+          "chapters": []
+        }
+      ]
+    },
+    {
+      "id": "c8",
+      "name": "Class 8",
+      "subjects": [
+        {
+          "id": "c8-eng",
+          "name": "English",
+          "icon": "📘",
+          "chapters": []
+        },
+        {
+          "id": "c8-math",
+          "name": "Mathematics",
+          "icon": "📐",
+          "chapters": []
+        },
+        {
+          "id": "c8-sci",
+          "name": "Science",
+          "icon": "🔬",
+          "chapters": []
+        },
+        {
+          "id": "c8-sst",
+          "name": "Social Science",
+          "icon": "🌍",
+          "chapters": []
+        }
+      ]
+    },
+    {
+      "id": "c9",
+      "name": "Class 9",
+      "subjects": [
+        {
+          "id": "c9-eng",
+          "name": "English",
+          "icon": "📘",
+          "chapters": []
+        },
+        {
+          "id": "c9-math",
+          "name": "Mathematics",
+          "icon": "📐",
+          "chapters": []
+        },
+        {
+          "id": "c9-sci",
+          "name": "Science",
+          "icon": "🔬",
+          "chapters": []
+        },
+        {
+          "id": "c9-sst",
+          "name": "Social Science",
+          "icon": "🌍",
+          "chapters": []
+        }
+      ]
+    },
+    {
+      "id": "c10",
+      "name": "Class 10",
+      "subjects": [
+        {
+          "id": "c10-eng",
+          "name": "English",
+          "icon": "📘",
+          "chapters": []
+        },
+        {
+          "id": "c10-math",
+          "name": "Mathematics",
+          "icon": "📐",
+          "chapters": []
+        },
+        {
+          "id": "c10-sci",
+          "name": "Science",
+          "icon": "🔬",
+          "chapters": []
+        },
+        {
+          "id": "c10-sst",
+          "name": "Social Science",
+          "icon": "🌍",
+          "chapters": []
+        }
+      ]
+    }
+  ]
+}
