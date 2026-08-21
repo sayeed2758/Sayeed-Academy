@@ -1,167 +1,354 @@
 {
-  "version": "1.0.0",
-  "brand": "Sayeed Academy",
+  "version": "2.0.0",
+  "academy": "Sayeed Academy",
   "classes": [
     {
-      "id": "c6",
+      "id": "class-6",
       "name": "Class 6",
+      "short": "06",
       "subjects": [
         {
-          "id": "c6-eng",
+          "id": "c6-english",
           "name": "English",
-          "icon": "📘",
+          "icon": "📖",
           "chapters": [
             {
-              "id": "c6-eng-1",
-              "number": 1,
-              "title": "Chapter 1 — Sample Audio Summary",
-              "summary": "A sample chapter entry. The final content and audio can be added from the Content Manager."
+              "id": "c6e-01",
+              "title": "Who Did Patrick's Homework?",
+              "summary": "A quick audio summary of the chapter, key characters and central idea.",
+              "audio": "",
+              "duration": "--:--"
             },
             {
-              "id": "c6-eng-2",
-              "number": 2,
-              "title": "Chapter 2 — Sample Audio Summary",
-              "summary": "A sample chapter entry for testing navigation and the audio player."
+              "id": "c6e-02",
+              "title": "How the Dog Found Himself a New Master!",
+              "summary": "A concise chapter overview with the important events and lesson.",
+              "audio": "",
+              "duration": "--:--"
             }
           ]
         },
         {
           "id": "c6-math",
           "name": "Mathematics",
-          "icon": "📐",
-          "chapters": []
+          "icon": "∑",
+          "chapters": [
+            {
+              "id": "c6m-01",
+              "title": "Knowing Our Numbers",
+              "summary": "Place value, large numbers, estimation and everyday number sense.",
+              "audio": "",
+              "duration": "--:--"
+            },
+            {
+              "id": "c6m-02",
+              "title": "Whole Numbers",
+              "summary": "Natural numbers, whole numbers, number line and basic properties.",
+              "audio": "",
+              "duration": "--:--"
+            }
+          ]
         },
         {
-          "id": "c6-sci",
+          "id": "c6-science",
           "name": "Science",
           "icon": "🔬",
-          "chapters": []
-        },
-        {
-          "id": "c6-sst",
-          "name": "Social Science",
-          "icon": "🌍",
-          "chapters": []
+          "chapters": [
+            {
+              "id": "c6s-01",
+              "title": "Components of Food",
+              "summary": "Nutrients, balanced diet, deficiency diseases and simple food tests.",
+              "audio": "",
+              "duration": "--:--"
+            },
+            {
+              "id": "c6s-02",
+              "title": "Sorting Materials into Groups",
+              "summary": "Properties of materials and how objects can be grouped logically.",
+              "audio": "",
+              "duration": "--:--"
+            }
+          ]
         }
       ]
     },
     {
-      "id": "c7",
+      "id": "class-7",
       "name": "Class 7",
+      "short": "07",
       "subjects": [
         {
-          "id": "c7-eng",
+          "id": "c7-english",
           "name": "English",
-          "icon": "📘",
-          "chapters": []
+          "icon": "📖",
+          "chapters": [
+            {
+              "id": "c7e-01",
+              "title": "Three Questions",
+              "summary": "A short overview of the story, its characters and the message.",
+              "audio": "",
+              "duration": "--:--"
+            },
+            {
+              "id": "c7e-02",
+              "title": "A Gift of Chappals",
+              "summary": "Key events, characters and the central theme in a quick audio lesson.",
+              "audio": "",
+              "duration": "--:--"
+            }
+          ]
         },
         {
           "id": "c7-math",
           "name": "Mathematics",
-          "icon": "📐",
-          "chapters": []
+          "icon": "∑",
+          "chapters": [
+            {
+              "id": "c7m-01",
+              "title": "Integers",
+              "summary": "Positive and negative integers, number line and operations.",
+              "audio": "",
+              "duration": "--:--"
+            },
+            {
+              "id": "c7m-02",
+              "title": "Fractions and Decimals",
+              "summary": "Operations and practical understanding of fractions and decimals.",
+              "audio": "",
+              "duration": "--:--"
+            }
+          ]
         },
         {
-          "id": "c7-sci",
+          "id": "c7-science",
           "name": "Science",
           "icon": "🔬",
-          "chapters": []
-        },
-        {
-          "id": "c7-sst",
-          "name": "Social Science",
-          "icon": "🌍",
-          "chapters": []
+          "chapters": [
+            {
+              "id": "c7s-01",
+              "title": "Nutrition in Plants",
+              "summary": "Photosynthesis, nutrients and how plants prepare food.",
+              "audio": "",
+              "duration": "--:--"
+            },
+            {
+              "id": "c7s-02",
+              "title": "Nutrition in Animals",
+              "summary": "Modes of nutrition and digestion in different animals.",
+              "audio": "",
+              "duration": "--:--"
+            }
+          ]
         }
       ]
     },
     {
-      "id": "c8",
+      "id": "class-8",
       "name": "Class 8",
+      "short": "08",
       "subjects": [
         {
-          "id": "c8-eng",
+          "id": "c8-english",
           "name": "English",
-          "icon": "📘",
-          "chapters": []
+          "icon": "📖",
+          "chapters": [
+            {
+              "id": "c8e-01",
+              "title": "The Best Christmas Present in the World",
+              "summary": "Chapter summary, major events and the emotional message.",
+              "audio": "",
+              "duration": "--:--"
+            },
+            {
+              "id": "c8e-02",
+              "title": "The Tsunami",
+              "summary": "Important events and lessons from the accounts of the tsunami.",
+              "audio": "",
+              "duration": "--:--"
+            }
+          ]
         },
         {
           "id": "c8-math",
           "name": "Mathematics",
-          "icon": "📐",
-          "chapters": []
+          "icon": "∑",
+          "chapters": [
+            {
+              "id": "c8m-01",
+              "title": "Rational Numbers",
+              "summary": "Rational numbers, representation and properties of operations.",
+              "audio": "",
+              "duration": "--:--"
+            },
+            {
+              "id": "c8m-02",
+              "title": "Linear Equations in One Variable",
+              "summary": "How to form, simplify and solve basic linear equations.",
+              "audio": "",
+              "duration": "--:--"
+            }
+          ]
         },
         {
-          "id": "c8-sci",
+          "id": "c8-science",
           "name": "Science",
           "icon": "🔬",
-          "chapters": []
-        },
-        {
-          "id": "c8-sst",
-          "name": "Social Science",
-          "icon": "🌍",
-          "chapters": []
+          "chapters": [
+            {
+              "id": "c8s-01",
+              "title": "Crop Production and Management",
+              "summary": "Agricultural practices, tools, irrigation and crop protection.",
+              "audio": "",
+              "duration": "--:--"
+            },
+            {
+              "id": "c8s-02",
+              "title": "Microorganisms: Friend and Foe",
+              "summary": "Useful and harmful microorganisms and their everyday applications.",
+              "audio": "",
+              "duration": "--:--"
+            }
+          ]
         }
       ]
     },
     {
-      "id": "c9",
+      "id": "class-9",
       "name": "Class 9",
+      "short": "09",
       "subjects": [
         {
-          "id": "c9-eng",
+          "id": "c9-english",
           "name": "English",
-          "icon": "📘",
-          "chapters": []
+          "icon": "📖",
+          "chapters": [
+            {
+              "id": "c9e-01",
+              "title": "The Fun They Had",
+              "summary": "A futuristic story about education, technology and human connection.",
+              "audio": "",
+              "duration": "--:--"
+            },
+            {
+              "id": "c9e-02",
+              "title": "The Sound of Music",
+              "summary": "The journeys and achievements of two remarkable musicians.",
+              "audio": "",
+              "duration": "--:--"
+            }
+          ]
         },
         {
           "id": "c9-math",
           "name": "Mathematics",
-          "icon": "📐",
-          "chapters": []
+          "icon": "∑",
+          "chapters": [
+            {
+              "id": "c9m-01",
+              "title": "Number Systems",
+              "summary": "Rational and irrational numbers and their representation.",
+              "audio": "",
+              "duration": "--:--"
+            },
+            {
+              "id": "c9m-02",
+              "title": "Polynomials",
+              "summary": "Terms, coefficients, degree and basic polynomial operations.",
+              "audio": "",
+              "duration": "--:--"
+            }
+          ]
         },
         {
-          "id": "c9-sci",
+          "id": "c9-science",
           "name": "Science",
           "icon": "🔬",
-          "chapters": []
-        },
-        {
-          "id": "c9-sst",
-          "name": "Social Science",
-          "icon": "🌍",
-          "chapters": []
+          "chapters": [
+            {
+              "id": "c9s-01",
+              "title": "Matter in Our Surroundings",
+              "summary": "States of matter, particle nature and changes of state.",
+              "audio": "",
+              "duration": "--:--"
+            },
+            {
+              "id": "c9s-02",
+              "title": "Is Matter Around Us Pure?",
+              "summary": "Mixtures, solutions and methods of separation.",
+              "audio": "",
+              "duration": "--:--"
+            }
+          ]
         }
       ]
     },
     {
-      "id": "c10",
+      "id": "class-10",
       "name": "Class 10",
+      "short": "10",
       "subjects": [
         {
-          "id": "c10-eng",
+          "id": "c10-english",
           "name": "English",
-          "icon": "📘",
-          "chapters": []
+          "icon": "📖",
+          "chapters": [
+            {
+              "id": "c10e-01",
+              "title": "A Letter to God",
+              "summary": "A concise overview of Lencho, his faith and the story's central idea.",
+              "audio": "",
+              "duration": "--:--"
+            },
+            {
+              "id": "c10e-02",
+              "title": "Nelson Mandela: Long Walk to Freedom",
+              "summary": "Key ideas about freedom, courage, equality and responsibility.",
+              "audio": "",
+              "duration": "--:--"
+            }
+          ]
         },
         {
           "id": "c10-math",
           "name": "Mathematics",
-          "icon": "📐",
-          "chapters": []
+          "icon": "∑",
+          "chapters": [
+            {
+              "id": "c10m-01",
+              "title": "Real Numbers",
+              "summary": "Euclid's division algorithm, irrational numbers and decimal expansions.",
+              "audio": "",
+              "duration": "--:--"
+            },
+            {
+              "id": "c10m-02",
+              "title": "Polynomials",
+              "summary": "Zeros of polynomials and the relationship between zeros and coefficients.",
+              "audio": "",
+              "duration": "--:--"
+            }
+          ]
         },
         {
-          "id": "c10-sci",
+          "id": "c10-science",
           "name": "Science",
           "icon": "🔬",
-          "chapters": []
-        },
-        {
-          "id": "c10-sst",
-          "name": "Social Science",
-          "icon": "🌍",
-          "chapters": []
+          "chapters": [
+            {
+              "id": "c10s-01",
+              "title": "Chemical Reactions and Equations",
+              "summary": "Types of reactions, balancing equations and observable changes.",
+              "audio": "",
+              "duration": "--:--"
+            },
+            {
+              "id": "c10s-02",
+              "title": "Acids, Bases and Salts",
+              "summary": "Properties, indicators, pH and common salts in daily life.",
+              "audio": "",
+              "duration": "--:--"
+            }
+          ]
         }
       ]
     }
