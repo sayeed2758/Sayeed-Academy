@@ -3,86 +3,84 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
-<meta name="theme-color" content="#0b1220">
-<meta name="description" content="Sayeed Academy — chapter-wise audio learning for Classes 6 to 10.">
+<meta name="theme-color" content="#07152f">
+<meta name="description" content="Sayeed Academy — premium chapter-wise audio learning for Classes 6 to 10.">
 <link rel="manifest" href="manifest.webmanifest">
 <link rel="icon" href="assets/icons/logo.png">
 <link rel="stylesheet" href="assets/css/style.css">
-<title>Sayeed Academy — Audio Learning</title>
+<title>Sayeed Academy • Audio Learning Pro</title>
 </head>
 <body>
-<div id="app">
+<div class="app-shell">
   <aside class="sidebar" id="sidebar">
     <div class="brand">
-      <img src="assets/icons/logo.png" alt="Sayeed Academy logo" class="brand-logo">
-      <div><strong>Sayeed Academy</strong><span>Audio Learning</span></div>
+      <img src="assets/icons/logo.png" alt="Sayeed Academy" class="brand-logo">
+      <div class="brand-copy"><strong>Sayeed Academy</strong><span>Audio Learning Pro</span></div>
+      <button class="icon-btn mobile-close" id="closeSidebar" aria-label="Close menu">×</button>
     </div>
+    <div class="sidebar-label">LEARNING</div>
     <nav class="nav">
-      <button class="nav-item active" data-view="home">⌂ <span>Home</span></button>
-      <button class="nav-item" data-view="library">▦ <span>Library</span></button>
-      <button class="nav-item" data-view="favorites">★ <span>Favorites</span></button>
-      <button class="nav-item" data-view="history">◷ <span>History</span></button>
-      <button class="nav-item" data-view="manage">⚙ <span>Content Manager</span></button>
+      <button class="nav-item active" data-view="home"><span>⌂</span>Dashboard</button>
+      <button class="nav-item" data-view="library"><span>▦</span>Audio Library</button>
+      <button class="nav-item" data-view="favorites"><span>★</span>Favorites</button>
+      <button class="nav-item" data-view="history"><span>◷</span>Listening History</button>
+    </nav>
+    <div class="sidebar-label">MANAGEMENT</div>
+    <nav class="nav">
+      <button class="nav-item" data-view="manager"><span>⚙</span>Content Manager</button>
+      <button class="nav-item" data-view="backup"><span>⇅</span>Backup & Restore</button>
     </nav>
     <div class="sidebar-bottom">
-      <div class="storage-note"><span class="dot"></span><div><b>Offline-friendly</b><small>Your preferences stay on this device.</small></div></div>
-      <button class="nav-item" data-action="theme">◐ <span>Toggle theme</span></button>
+      <div class="mini-card">
+        <span class="mini-dot"></span>
+        <div><strong>Offline-ready</strong><small>Your library stays available on this device.</small></div>
+      </div>
+      <button class="theme-btn" id="themeToggle">☾ <span>Dark mode</span></button>
     </div>
   </aside>
 
+  <div class="backdrop" id="backdrop"></div>
   <main class="main">
     <header class="topbar">
-      <button class="icon-btn menu-btn" id="menuBtn" aria-label="Open menu">☰</button>
-      <div class="crumb" id="crumb">Home</div>
+      <button class="icon-btn menu-btn" id="openSidebar" aria-label="Open menu">☰</button>
+      <div class="crumbs"><span>SAYEED ACADEMY</span><b>•</b><strong id="pageTitle">Dashboard</strong></div>
       <div class="top-actions">
-        <button class="icon-btn" id="searchBtn" aria-label="Search">⌕</button>
-        <button class="profile-chip" id="installBtn" hidden>Install</button>
+        <button class="icon-btn" id="topTheme" title="Toggle theme">☾</button>
+        <button class="avatar-btn" id="quickManager" title="Open Content Manager">SA</button>
       </div>
     </header>
-
-    <section class="search-panel hidden" id="searchPanel">
-      <input id="globalSearch" type="search" placeholder="Search class, subject or chapter…" autocomplete="off">
-      <div id="searchResults" class="search-results"></div>
-    </section>
-
-    <div id="viewRoot"></div>
+    <div id="appContent"></div>
   </main>
-</div>
 
-<div class="overlay hidden" id="overlay"></div>
-
-<div class="player-dock" id="playerDock">
-  <div class="player-meta">
-    <div class="mini-cover" id="miniCover">▶</div>
-    <div><b id="playerTitle">Nothing playing</b><span id="playerSub">Choose a chapter to begin</span></div>
-  </div>
-  <div class="player-center">
+  <section class="player" id="player">
+    <div class="player-main">
+      <div class="player-art" id="playerArt">▶</div>
+      <div class="player-meta">
+        <strong id="playerTitle">Nothing playing</strong>
+        <span id="playerSub">Choose a chapter from the library</span>
+      </div>
+      <button class="player-star" id="playerFav" title="Favorite">☆</button>
+    </div>
     <div class="player-controls">
-      <button class="round-btn" id="back15" title="Back 15 seconds">↶15</button>
-      <button class="play-btn" id="playBtn" title="Play / pause">▶</button>
-      <button class="round-btn" id="forward15" title="Forward 15 seconds">15↷</button>
+      <button class="small-control" id="back15">↶15</button>
+      <button class="play-control" id="playPause">▶</button>
+      <button class="small-control" id="forward15">↷15</button>
     </div>
-    <div class="progress-row">
-      <span id="currentTime">0:00</span>
-      <input type="range" id="progress" min="0" max="100" value="0" step="0.1" aria-label="Audio progress">
-      <span id="duration">0:00</span>
+    <div class="player-progress">
+      <span id="currentTime">00:00</span>
+      <input type="range" id="seekBar" min="0" max="100" value="0" aria-label="Audio progress">
+      <span id="duration">00:00</span>
     </div>
-  </div>
-  <div class="player-extra">
-    <button class="icon-btn" id="playerFav" title="Favorite">☆</button>
-    <button class="icon-btn" id="playerClose" title="Close player">×</button>
-  </div>
-  <audio id="audio" preload="metadata"></audio>
+    <audio id="audio" preload="metadata"></audio>
+    <button class="icon-btn player-close" id="closePlayer" title="Close player">×</button>
+  </section>
 </div>
 
 <div class="modal hidden" id="modal">
-  <div class="modal-card">
-    <div class="modal-head"><h3 id="modalTitle">Details</h3><button class="icon-btn" id="modalClose">×</button></div>
-    <div id="modalBody"></div>
-  </div>
+  <div class="modal-backdrop" data-close-modal></div>
+  <div class="modal-card" id="modalCard"></div>
 </div>
-
-<div class="toast" id="toast"></div>
-<script src="assets/js/app.js" defer></script>
+<div class="toast-wrap" id="toastWrap"></div>
+<script src="assets/js/app.js"></script>
 </body>
 </html>
