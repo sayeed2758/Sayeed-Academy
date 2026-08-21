@@ -84,6 +84,15 @@
     }));
   }
   function findChapter(id) { return chapters().find(ch=>ch.id===id)||null; }
+  function findChapterRecord(id) {
+    for (const c of classes()) {
+      for (const s of (c.subjects || [])) {
+        const chapter = (s.chapters || []).find(ch => ch.id === id);
+        if (chapter) return { chapter, classId: c.id, className: c.name, subjectId: s.id, subjectName: s.name, subject: s };
+      }
+    }
+    return null;
+  }
   function getClass(id) { return classes().find(c=>c.id===id)||null; }
   function getSubject(classId,subjectId) { return getClass(classId)?.subjects?.find(s=>s.id===subjectId)||null; }
 
@@ -615,7 +624,7 @@
 
   window.addEventListener('beforeunload',()=>objectUrls.forEach(url=>URL.revokeObjectURL(url)));
   document.addEventListener('DOMContentLoaded',init);
-  if ('serviceWorker' in navigator) window.addEventListener('load',()=>navigator.serviceWorker.register('./sw.js?v=20260821-6').catch(()=>{}));
+  if ('serviceWorker' in navigator) window.addEventListener('load',()=>navigator.serviceWorker.register('./sw.js?v=20260821-7').catch(()=>{}));
 
 /* ===== V6 UPGRADE LAYER — preserves V4/V5 core and adds UX + thumbnails ===== */
   function thumbnailSource(ch){return ch?.thumbnail||'';}
@@ -762,8 +771,17 @@
   async function saveChapter(existingId){
     collectModalPartDrafts();const title=$('#fTitle')?.value.trim();if(!title)return toast('Chapter title is required',true);
     const classId=$('#fClass')?.value,subjectId=$('#fSubject')?.value,subject=getSubject(classId,subjectId);if(!subject)return toast('Please select a valid class and subject',true);if(!modalParts.length)return toast('Add at least one audio part',true);
-    const old=existingId?findChapter(existingId):null;let target=old;if(target&&(target.classId!==classId||target.subjectId!==subjectId)){const os=getSubject(target.classId,target.subjectId);if(os)os.chapters=os.chapters.filter(x=>x.id!==existingId);target=null}
-    if(!target){target={id:existingId||uid('chapter'),title:'',summary:'',thumbnail:'',thumbnailSource:'url',difficulty:'Medium',parts:[]};subject.chapters.push(target)}
+    const oldRecord=existingId?findChapterRecord(existingId):null;
+    let target=oldRecord?.chapter||null;
+    if(target && (oldRecord.classId!==classId || oldRecord.subjectId!==subjectId)){
+      const oldSubject=oldRecord.subject;
+      if(oldSubject) oldSubject.chapters=(oldSubject.chapters||[]).filter(x=>x.id!==existingId);
+      target=null;
+    }
+    if(!target){
+      target={id:existingId||uid('chapter'),title:'',summary:'',thumbnail:'',thumbnailSource:'url',difficulty:'Medium',parts:[]};
+      subject.chapters.push(target);
+    }
     const oldParts=getParts(target),oldKeys=new Set(oldParts.map(p=>p.storageKey).filter(Boolean)),next=[];
     for(let i=0;i<modalParts.length;i++){const d=modalParts[i],part={...d,id:d.id||uid('part'),title:(d.title||`Part ${i+1}`).trim(),summary:(d.summary||'').trim(),duration:(d.duration||'--:--').trim(),audioSource:d.audioSource==='local'?'local':'url',storageKey:d.storageKey||uid('audio')};const file=modalPartFiles.get(d.id);
       if(part.audioSource==='url'){const row=$$('.part-row').find(r=>r.dataset.partId===d.id),url=row?.querySelector('[data-part-url]')?.value.trim()||'';if(url&&!/^https?:\/\//i.test(url))return toast(`Part ${i+1}: audio URL must start with http:// or https://`,true);part.audio=url;if(part.storageKey)await deleteAudioBlob(part.storageKey).catch(()=>{})}
