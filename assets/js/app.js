@@ -110,7 +110,7 @@
   function mediaMetadata(ch,part) {
     if(!('mediaSession' in navigator)) return;
     try {
-      const artwork=ch.thumbnail&&!String(ch.thumbnail).startsWith('indexeddb://')?[{src:ch.thumbnail,sizes:'512x512',type:'image/png'}]:[];
+      const artwork=ch.thumbnail&&!String(ch.thumbnail).startsWith('indexeddb://')?[{src:ch.thumbnail,sizes:'512x512'}]:[];
       navigator.mediaSession.metadata=new MediaMetadata({title:ch.title||'Sayeed Academy',artist:`${ch.className||''} • ${ch.subjectName||''}`,album:part?.title||'Audio Summary',artwork});
       const safe=(name,fn)=>{try{navigator.mediaSession.setActionHandler(name,fn)}catch(_){}};
       safe('play',()=>$('#audio')?.play()); safe('pause',()=>$('#audio')?.pause());
@@ -412,7 +412,31 @@
     if(!subject)return toast('Please select a valid class and subject',true);if(!modalParts.length)return toast('Add at least one audio part',true);
     const old=existingId?findChapter(existingId):null;let target=old;
     if(target&&(target.classId!==classId||target.subjectId!==subjectId)){const os=getSubject(target.classId,target.subjectId);if(os)os.chapters=os.chapters.filter(x=>x.id!==existingId);target=null;}
-    if(!target){target={id:existingId||uid('chapter'),title:'',summary:'',audio:'',duration:'--:--',audioSource:'url',parts:[]};subject.chapters.push(target);}
+    if(!target){target={id:existingId||uid('chapter'),title:'',summary:'',audio:'',duration:'--:--',audioSource:'url',thumbnail:'',thumbnailSource:'url',difficulty:'Medium',parts:[]};subject.chapters.push(target);}
+
+    // Preserve and persist the chapter thumbnail independently from audio parts.
+    // URL thumbnails stay as URLs; uploaded thumbnails are stored as data URLs so
+    // they survive the existing localStorage/catalog backup system without
+    // introducing a new storage dependency or breaking old V4/V5 data.
+    const thumbSource=$('#fThumbSource')?.value==='local'?'local':'url';
+    target.thumbnailSource=thumbSource;
+    if(thumbSource==='url'){
+      const thumbUrl=$('#fThumbnail')?.value.trim()||'';
+      if(thumbUrl && !/^https?:\/\//i.test(thumbUrl)){
+        return toast('Thumbnail URL must start with http:// or https://',true);
+      }
+      target.thumbnail=thumbUrl;
+    }else{
+      const thumbFile=$('#fThumbFile')?.files?.[0];
+      if(thumbFile){
+        if(!/^image\//i.test(thumbFile.type))return toast('Please choose an image file',true);
+        if(thumbFile.size>2*1024*1024)return toast('Thumbnail must be 2 MB or smaller',true);
+        target.thumbnail=await readFileDataUrl(thumbFile);
+      }else if(!target.thumbnail){
+        return toast('Choose a thumbnail image or switch to Image URL',true);
+      }
+    }
+
     const oldParts=getParts(target),oldKeys=new Set(oldParts.map(p=>p.storageKey).filter(Boolean)),next=[];
     for(let i=0;i<modalParts.length;i++){
       const d=modalParts[i],part={...d,id:d.id||uid('part'),title:(d.title||`Part ${i+1}`).trim(),summary:(d.summary||'').trim(),duration:(d.duration||'--:--').trim(),audioSource:d.audioSource==='local'?'local':'url',storageKey:d.storageKey||uid('audio')};
@@ -622,7 +646,7 @@
     try{
       navigator.mediaSession.metadata=new MediaMetadata({
         title:ch.title||'Sayeed Academy',artist:`${ch.className||''} • ${ch.subjectName||''}`,album:part?.title||'Audio Summary',
-        artwork:thumbnailSource(ch)?[{src:thumbnailSource(ch),sizes:'512x512',type:'image/png'}]:[]
+        artwork:thumbnailSource(ch)?[{src:thumbnailSource(ch),sizes:'512x512'}]:[]
       });
       const safe=(name,fn)=>{try{navigator.mediaSession.setActionHandler(name,fn)}catch(_){}};
       safe('play',()=>$('#audio')?.play());safe('pause',()=>$('#audio')?.pause());
@@ -701,10 +725,23 @@
       <div class="field"><label>Difficulty</label><select id="fDifficulty"><option ${form.difficulty==='Easy'?'selected':''}>Easy</option><option ${form.difficulty==='Medium'?'selected':''}>Medium</option><option ${form.difficulty==='Hard'?'selected':''}>Hard</option></select></div>
       <div class="field full" id="thumbUrlBox"><label>Thumbnail URL</label><input id="fThumbnail" value="${esc(form.thumbnailSource==='local'?'':form.thumbnail||'')}" placeholder="https://example.com/chapter-cover.jpg"><small class="note">Suggested: JPG, PNG or WebP. A fallback cover is generated automatically when blank.</small></div>
       <div class="field full hidden" id="thumbFileBox"><label>Upload thumbnail</label><div class="upload-box"><input id="fThumbFile" type="file" accept="image/*"><small class="note">Small cover images are stored locally for this device. Keep images under 2 MB.</small></div></div>
+      <div class="field full"><div id="thumbnailPreview" class="thumb-editor-preview">${form.thumbnail?`<img src="${esc(form.thumbnail)}" alt="Thumbnail preview">`:`<span>Thumbnail preview will appear here</span>`}</div></div>
       <div class="field full"><div class="parts-head"><div><strong>Audio Parts</strong><span>Add Part 2, Part 3 or reorder parts for long chapters.</span></div><button type="button" class="btn btn-ghost" data-add-part>＋ Add Part</button></div><div id="modalParts"></div></div>
       </div><div class="modal-actions"><button type="button" class="btn btn-ghost" data-close-modal>Cancel</button><button class="btn btn-blue" type="submit">${ch?'Save Changes':'Create Chapter'}</button></div></form>`;
     renderModalParts();$('#modal').classList.remove('hidden');
-    const ts=$('#fThumbSource'),ub=$('#thumbUrlBox'),fb=$('#thumbFileBox');const toggle=()=>{const l=ts.value==='local';ub.classList.toggle('hidden',l);fb.classList.toggle('hidden',!l)};ts.onchange=toggle;toggle();
+    const ts=$('#fThumbSource'),ub=$('#thumbUrlBox'),fb=$('#thumbFileBox'),tp=$('#thumbnailPreview');
+    const showThumbPreview=(src)=>{if(!tp)return;tp.innerHTML=src?`<img src="${esc(src)}" alt="Thumbnail preview" onerror="this.remove();tp.innerHTML='<span>Unable to preview this image</span>'">`:'<span>Thumbnail preview will appear here</span>';};
+    const toggle=()=>{
+      const l=ts.value==='local';ub.classList.toggle('hidden',l);fb.classList.toggle('hidden',!l);
+      if(l){
+        const f=$('#fThumbFile')?.files?.[0];
+        if(f){const r=new FileReader();r.onload=()=>showThumbPreview(String(r.result||''));r.readAsDataURL(f);}
+        else showThumbPreview(form.thumbnailSource==='local'?form.thumbnail:'');
+      }else showThumbPreview($('#fThumbnail')?.value.trim()||'');
+    };
+    ts.onchange=toggle;toggle();
+    $('#fThumbnail')?.addEventListener('input',e=>{if(ts.value==='url')showThumbPreview(e.target.value.trim())});
+    $('#fThumbFile')?.addEventListener('change',e=>{const f=e.target.files?.[0];if(!f)return;if(!/^image\\//i.test(f.type)){toast('Please choose an image file',true);e.target.value='';return;}if(f.size>2*1024*1024){toast('Thumbnail must be 2 MB or smaller',true);e.target.value='';return;}const r=new FileReader();r.onload=()=>showThumbPreview(String(r.result||''));r.readAsDataURL(f);});
     $('#fClass').onchange=()=>{const subs=getClass($('#fClass').value)?.subjects||[];$('#fSubject').innerHTML=subs.map(s=>`<option value="${esc(s.id)}">${esc(s.name)}</option>`).join('')};
     $('#chapterForm').onsubmit=async e=>{e.preventDefault();await saveChapter(id||null)};
     $$('[data-close-modal]').forEach(b=>b.onclick=closeModal);
