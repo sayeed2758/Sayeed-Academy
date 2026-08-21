@@ -1,5 +1,5 @@
 {
-  "version": "2.0.0",
+  "version": "3.0.0",
   "academy": "Sayeed Academy",
   "classes": [
     {
@@ -8,65 +8,140 @@
       "short": "06",
       "subjects": [
         {
-          "id": "c6-english",
+          "id": "c6-s1",
           "name": "English",
           "icon": "📖",
           "chapters": [
             {
-              "id": "c6e-01",
-              "title": "Who Did Patrick's Homework?",
-              "summary": "A quick audio summary of the chapter, key characters and central idea.",
+              "id": "c6-1-01",
+              "title": "English Chapter 1",
+              "summary": "Add the audio summary and key points for Class 6 English Chapter 1.",
               "audio": "",
-              "duration": "--:--"
+              "duration": "--:--",
+              "audioSource": "url"
             },
             {
-              "id": "c6e-02",
-              "title": "How the Dog Found Himself a New Master!",
-              "summary": "A concise chapter overview with the important events and lesson.",
+              "id": "c6-1-02",
+              "title": "English Chapter 2",
+              "summary": "Add the audio summary and key points for Class 6 English Chapter 2.",
               "audio": "",
-              "duration": "--:--"
+              "duration": "--:--",
+              "audioSource": "url"
             }
           ]
         },
         {
-          "id": "c6-math",
+          "id": "c6-s2",
           "name": "Mathematics",
           "icon": "∑",
           "chapters": [
             {
-              "id": "c6m-01",
-              "title": "Knowing Our Numbers",
-              "summary": "Place value, large numbers, estimation and everyday number sense.",
+              "id": "c6-2-01",
+              "title": "Mathematics Chapter 1",
+              "summary": "Add the audio summary and key points for Class 6 Mathematics Chapter 1.",
               "audio": "",
-              "duration": "--:--"
+              "duration": "--:--",
+              "audioSource": "url"
             },
             {
-              "id": "c6m-02",
-              "title": "Whole Numbers",
-              "summary": "Natural numbers, whole numbers, number line and basic properties.",
+              "id": "c6-2-02",
+              "title": "Mathematics Chapter 2",
+              "summary": "Add the audio summary and key points for Class 6 Mathematics Chapter 2.",
               "audio": "",
-              "duration": "--:--"
+              "duration": "--:--",
+              "audioSource": "url"
             }
           ]
         },
         {
-          "id": "c6-science",
+          "id": "c6-s3",
           "name": "Science",
-          "icon": "🔬",
+          "icon": "⚗",
           "chapters": [
             {
-              "id": "c6s-01",
-              "title": "Components of Food",
-              "summary": "Nutrients, balanced diet, deficiency diseases and simple food tests.",
+              "id": "c6-3-01",
+              "title": "Science Chapter 1",
+              "summary": "Add the audio summary and key points for Class 6 Science Chapter 1.",
               "audio": "",
-              "duration": "--:--"
+              "duration": "--:--",
+              "audioSource": "url"
             },
             {
-              "id": "c6s-02",
-              "title": "Sorting Materials into Groups",
-              "summary": "Properties of materials and how objects can be grouped logically.",
+              "id": "c6-3-02",
+              "title": "Science Chapter 2",
+              "summary": "Add the audio summary and key points for Class 6 Science Chapter 2.",
               "audio": "",
-              "duration": "--:--"
+              "duration": "--:--",
+              "audioSource": "url"
+            }
+          ]
+        },
+        {
+          "id": "c6-s4",
+          "name": "Social Science",
+          "icon": "🌍",
+          "chapters": [
+            {
+              "id": "c6-4-01",
+              "title": "Social Science Chapter 1",
+              "summary": "Add the audio summary and key points for Class 6 Social Science Chapter 1.",
+              "audio": "",
+              "duration": "--:--",
+              "audioSource": "url"
+            },
+            {
+              "id": "c6-4-02",
+              "title": "Social Science Chapter 2",
+              "summary": "Add the audio summary and key points for Class 6 Social Science Chapter 2.",
+              "audio": "",
+              "duration": "--:--",
+              "audioSource": "url"
+            }
+          ]
+        },
+        {
+          "id": "c6-s5",
+          "name": "Hindi",
+          "icon": "अ",
+          "chapters": [
+            {
+              "id": "c6-5-01",
+              "title": "Hindi Chapter 1",
+              "summary": "Add the audio summary and key points for Class 6 Hindi Chapter 1.",
+              "audio": "",
+              "duration": "--:--",
+              "audioSource": "url"
+            },
+            {
+              "id": "c6-5-02",
+              "title": "Hindi Chapter 2",
+              "summary": "Add the audio summary and key points for Class 6 Hindi Chapter 2.",
+              "audio": "",
+              "duration": "--:--",
+              "audioSource": "url"
+            }
+          ]
+        },
+        {
+          "id": "c6-s6",
+          "name": "Computer",
+          "icon": "💻",
+          "chapters": [
+            {
+              "id": "c6-6-01",
+              "title": "Computer Chapter 1",
+              "summary": "Add the audio summary and key points for Class 6 Computer Chapter 1.",
+              "audio": "",
+              "duration": "--:--",
+              "audioSource": "url"
+            },
+            {
+              "id": "c6-6-02",
+              "title": "Computer Chapter 2",
+              "summary": "Add the audio summary and key points for Class 6 Computer Chapter 2.",
+              "audio": "",
+              "duration": "--:--",
+              "audioSource": "url"
             }
           ]
         }
@@ -78,65 +153,140 @@
       "short": "07",
       "subjects": [
         {
-          "id": "c7-english",
+          "id": "c7-s1",
           "name": "English",
           "icon": "📖",
           "chapters": [
             {
-              "id": "c7e-01",
-              "title": "Three Questions",
-              "summary": "A short overview of the story, its characters and the message.",
+              "id": "c7-1-01",
+              "title": "English Chapter 1",
+              "summary": "Add the audio summary and key points for Class 7 English Chapter 1.",
               "audio": "",
-              "duration": "--:--"
+              "duration": "--:--",
+              "audioSource": "url"
             },
             {
-              "id": "c7e-02",
-              "title": "A Gift of Chappals",
-              "summary": "Key events, characters and the central theme in a quick audio lesson.",
+              "id": "c7-1-02",
+              "title": "English Chapter 2",
+              "summary": "Add the audio summary and key points for Class 7 English Chapter 2.",
               "audio": "",
-              "duration": "--:--"
+              "duration": "--:--",
+              "audioSource": "url"
             }
           ]
         },
         {
-          "id": "c7-math",
+          "id": "c7-s2",
           "name": "Mathematics",
           "icon": "∑",
           "chapters": [
             {
-              "id": "c7m-01",
-              "title": "Integers",
-              "summary": "Positive and negative integers, number line and operations.",
+              "id": "c7-2-01",
+              "title": "Mathematics Chapter 1",
+              "summary": "Add the audio summary and key points for Class 7 Mathematics Chapter 1.",
               "audio": "",
-              "duration": "--:--"
+              "duration": "--:--",
+              "audioSource": "url"
             },
             {
-              "id": "c7m-02",
-              "title": "Fractions and Decimals",
-              "summary": "Operations and practical understanding of fractions and decimals.",
+              "id": "c7-2-02",
+              "title": "Mathematics Chapter 2",
+              "summary": "Add the audio summary and key points for Class 7 Mathematics Chapter 2.",
               "audio": "",
-              "duration": "--:--"
+              "duration": "--:--",
+              "audioSource": "url"
             }
           ]
         },
         {
-          "id": "c7-science",
+          "id": "c7-s3",
           "name": "Science",
-          "icon": "🔬",
+          "icon": "⚗",
           "chapters": [
             {
-              "id": "c7s-01",
-              "title": "Nutrition in Plants",
-              "summary": "Photosynthesis, nutrients and how plants prepare food.",
+              "id": "c7-3-01",
+              "title": "Science Chapter 1",
+              "summary": "Add the audio summary and key points for Class 7 Science Chapter 1.",
               "audio": "",
-              "duration": "--:--"
+              "duration": "--:--",
+              "audioSource": "url"
             },
             {
-              "id": "c7s-02",
-              "title": "Nutrition in Animals",
-              "summary": "Modes of nutrition and digestion in different animals.",
+              "id": "c7-3-02",
+              "title": "Science Chapter 2",
+              "summary": "Add the audio summary and key points for Class 7 Science Chapter 2.",
               "audio": "",
-              "duration": "--:--"
+              "duration": "--:--",
+              "audioSource": "url"
+            }
+          ]
+        },
+        {
+          "id": "c7-s4",
+          "name": "Social Science",
+          "icon": "🌍",
+          "chapters": [
+            {
+              "id": "c7-4-01",
+              "title": "Social Science Chapter 1",
+              "summary": "Add the audio summary and key points for Class 7 Social Science Chapter 1.",
+              "audio": "",
+              "duration": "--:--",
+              "audioSource": "url"
+            },
+            {
+              "id": "c7-4-02",
+              "title": "Social Science Chapter 2",
+              "summary": "Add the audio summary and key points for Class 7 Social Science Chapter 2.",
+              "audio": "",
+              "duration": "--:--",
+              "audioSource": "url"
+            }
+          ]
+        },
+        {
+          "id": "c7-s5",
+          "name": "Hindi",
+          "icon": "अ",
+          "chapters": [
+            {
+              "id": "c7-5-01",
+              "title": "Hindi Chapter 1",
+              "summary": "Add the audio summary and key points for Class 7 Hindi Chapter 1.",
+              "audio": "",
+              "duration": "--:--",
+              "audioSource": "url"
+            },
+            {
+              "id": "c7-5-02",
+              "title": "Hindi Chapter 2",
+              "summary": "Add the audio summary and key points for Class 7 Hindi Chapter 2.",
+              "audio": "",
+              "duration": "--:--",
+              "audioSource": "url"
+            }
+          ]
+        },
+        {
+          "id": "c7-s6",
+          "name": "Computer",
+          "icon": "💻",
+          "chapters": [
+            {
+              "id": "c7-6-01",
+              "title": "Computer Chapter 1",
+              "summary": "Add the audio summary and key points for Class 7 Computer Chapter 1.",
+              "audio": "",
+              "duration": "--:--",
+              "audioSource": "url"
+            },
+            {
+              "id": "c7-6-02",
+              "title": "Computer Chapter 2",
+              "summary": "Add the audio summary and key points for Class 7 Computer Chapter 2.",
+              "audio": "",
+              "duration": "--:--",
+              "audioSource": "url"
             }
           ]
         }
@@ -148,65 +298,140 @@
       "short": "08",
       "subjects": [
         {
-          "id": "c8-english",
+          "id": "c8-s1",
           "name": "English",
           "icon": "📖",
           "chapters": [
             {
-              "id": "c8e-01",
-              "title": "The Best Christmas Present in the World",
-              "summary": "Chapter summary, major events and the emotional message.",
+              "id": "c8-1-01",
+              "title": "English Chapter 1",
+              "summary": "Add the audio summary and key points for Class 8 English Chapter 1.",
               "audio": "",
-              "duration": "--:--"
+              "duration": "--:--",
+              "audioSource": "url"
             },
             {
-              "id": "c8e-02",
-              "title": "The Tsunami",
-              "summary": "Important events and lessons from the accounts of the tsunami.",
+              "id": "c8-1-02",
+              "title": "English Chapter 2",
+              "summary": "Add the audio summary and key points for Class 8 English Chapter 2.",
               "audio": "",
-              "duration": "--:--"
+              "duration": "--:--",
+              "audioSource": "url"
             }
           ]
         },
         {
-          "id": "c8-math",
+          "id": "c8-s2",
           "name": "Mathematics",
           "icon": "∑",
           "chapters": [
             {
-              "id": "c8m-01",
-              "title": "Rational Numbers",
-              "summary": "Rational numbers, representation and properties of operations.",
+              "id": "c8-2-01",
+              "title": "Mathematics Chapter 1",
+              "summary": "Add the audio summary and key points for Class 8 Mathematics Chapter 1.",
               "audio": "",
-              "duration": "--:--"
+              "duration": "--:--",
+              "audioSource": "url"
             },
             {
-              "id": "c8m-02",
-              "title": "Linear Equations in One Variable",
-              "summary": "How to form, simplify and solve basic linear equations.",
+              "id": "c8-2-02",
+              "title": "Mathematics Chapter 2",
+              "summary": "Add the audio summary and key points for Class 8 Mathematics Chapter 2.",
               "audio": "",
-              "duration": "--:--"
+              "duration": "--:--",
+              "audioSource": "url"
             }
           ]
         },
         {
-          "id": "c8-science",
+          "id": "c8-s3",
           "name": "Science",
-          "icon": "🔬",
+          "icon": "⚗",
           "chapters": [
             {
-              "id": "c8s-01",
-              "title": "Crop Production and Management",
-              "summary": "Agricultural practices, tools, irrigation and crop protection.",
+              "id": "c8-3-01",
+              "title": "Science Chapter 1",
+              "summary": "Add the audio summary and key points for Class 8 Science Chapter 1.",
               "audio": "",
-              "duration": "--:--"
+              "duration": "--:--",
+              "audioSource": "url"
             },
             {
-              "id": "c8s-02",
-              "title": "Microorganisms: Friend and Foe",
-              "summary": "Useful and harmful microorganisms and their everyday applications.",
+              "id": "c8-3-02",
+              "title": "Science Chapter 2",
+              "summary": "Add the audio summary and key points for Class 8 Science Chapter 2.",
               "audio": "",
-              "duration": "--:--"
+              "duration": "--:--",
+              "audioSource": "url"
+            }
+          ]
+        },
+        {
+          "id": "c8-s4",
+          "name": "Social Science",
+          "icon": "🌍",
+          "chapters": [
+            {
+              "id": "c8-4-01",
+              "title": "Social Science Chapter 1",
+              "summary": "Add the audio summary and key points for Class 8 Social Science Chapter 1.",
+              "audio": "",
+              "duration": "--:--",
+              "audioSource": "url"
+            },
+            {
+              "id": "c8-4-02",
+              "title": "Social Science Chapter 2",
+              "summary": "Add the audio summary and key points for Class 8 Social Science Chapter 2.",
+              "audio": "",
+              "duration": "--:--",
+              "audioSource": "url"
+            }
+          ]
+        },
+        {
+          "id": "c8-s5",
+          "name": "Hindi",
+          "icon": "अ",
+          "chapters": [
+            {
+              "id": "c8-5-01",
+              "title": "Hindi Chapter 1",
+              "summary": "Add the audio summary and key points for Class 8 Hindi Chapter 1.",
+              "audio": "",
+              "duration": "--:--",
+              "audioSource": "url"
+            },
+            {
+              "id": "c8-5-02",
+              "title": "Hindi Chapter 2",
+              "summary": "Add the audio summary and key points for Class 8 Hindi Chapter 2.",
+              "audio": "",
+              "duration": "--:--",
+              "audioSource": "url"
+            }
+          ]
+        },
+        {
+          "id": "c8-s6",
+          "name": "Computer",
+          "icon": "💻",
+          "chapters": [
+            {
+              "id": "c8-6-01",
+              "title": "Computer Chapter 1",
+              "summary": "Add the audio summary and key points for Class 8 Computer Chapter 1.",
+              "audio": "",
+              "duration": "--:--",
+              "audioSource": "url"
+            },
+            {
+              "id": "c8-6-02",
+              "title": "Computer Chapter 2",
+              "summary": "Add the audio summary and key points for Class 8 Computer Chapter 2.",
+              "audio": "",
+              "duration": "--:--",
+              "audioSource": "url"
             }
           ]
         }
@@ -218,65 +443,140 @@
       "short": "09",
       "subjects": [
         {
-          "id": "c9-english",
+          "id": "c9-s1",
           "name": "English",
           "icon": "📖",
           "chapters": [
             {
-              "id": "c9e-01",
-              "title": "The Fun They Had",
-              "summary": "A futuristic story about education, technology and human connection.",
+              "id": "c9-1-01",
+              "title": "English Chapter 1",
+              "summary": "Add the audio summary and key points for Class 9 English Chapter 1.",
               "audio": "",
-              "duration": "--:--"
+              "duration": "--:--",
+              "audioSource": "url"
             },
             {
-              "id": "c9e-02",
-              "title": "The Sound of Music",
-              "summary": "The journeys and achievements of two remarkable musicians.",
+              "id": "c9-1-02",
+              "title": "English Chapter 2",
+              "summary": "Add the audio summary and key points for Class 9 English Chapter 2.",
               "audio": "",
-              "duration": "--:--"
+              "duration": "--:--",
+              "audioSource": "url"
             }
           ]
         },
         {
-          "id": "c9-math",
+          "id": "c9-s2",
           "name": "Mathematics",
           "icon": "∑",
           "chapters": [
             {
-              "id": "c9m-01",
-              "title": "Number Systems",
-              "summary": "Rational and irrational numbers and their representation.",
+              "id": "c9-2-01",
+              "title": "Mathematics Chapter 1",
+              "summary": "Add the audio summary and key points for Class 9 Mathematics Chapter 1.",
               "audio": "",
-              "duration": "--:--"
+              "duration": "--:--",
+              "audioSource": "url"
             },
             {
-              "id": "c9m-02",
-              "title": "Polynomials",
-              "summary": "Terms, coefficients, degree and basic polynomial operations.",
+              "id": "c9-2-02",
+              "title": "Mathematics Chapter 2",
+              "summary": "Add the audio summary and key points for Class 9 Mathematics Chapter 2.",
               "audio": "",
-              "duration": "--:--"
+              "duration": "--:--",
+              "audioSource": "url"
             }
           ]
         },
         {
-          "id": "c9-science",
+          "id": "c9-s3",
           "name": "Science",
-          "icon": "🔬",
+          "icon": "⚗",
           "chapters": [
             {
-              "id": "c9s-01",
-              "title": "Matter in Our Surroundings",
-              "summary": "States of matter, particle nature and changes of state.",
+              "id": "c9-3-01",
+              "title": "Science Chapter 1",
+              "summary": "Add the audio summary and key points for Class 9 Science Chapter 1.",
               "audio": "",
-              "duration": "--:--"
+              "duration": "--:--",
+              "audioSource": "url"
             },
             {
-              "id": "c9s-02",
-              "title": "Is Matter Around Us Pure?",
-              "summary": "Mixtures, solutions and methods of separation.",
+              "id": "c9-3-02",
+              "title": "Science Chapter 2",
+              "summary": "Add the audio summary and key points for Class 9 Science Chapter 2.",
               "audio": "",
-              "duration": "--:--"
+              "duration": "--:--",
+              "audioSource": "url"
+            }
+          ]
+        },
+        {
+          "id": "c9-s4",
+          "name": "Social Science",
+          "icon": "🌍",
+          "chapters": [
+            {
+              "id": "c9-4-01",
+              "title": "Social Science Chapter 1",
+              "summary": "Add the audio summary and key points for Class 9 Social Science Chapter 1.",
+              "audio": "",
+              "duration": "--:--",
+              "audioSource": "url"
+            },
+            {
+              "id": "c9-4-02",
+              "title": "Social Science Chapter 2",
+              "summary": "Add the audio summary and key points for Class 9 Social Science Chapter 2.",
+              "audio": "",
+              "duration": "--:--",
+              "audioSource": "url"
+            }
+          ]
+        },
+        {
+          "id": "c9-s5",
+          "name": "Hindi",
+          "icon": "अ",
+          "chapters": [
+            {
+              "id": "c9-5-01",
+              "title": "Hindi Chapter 1",
+              "summary": "Add the audio summary and key points for Class 9 Hindi Chapter 1.",
+              "audio": "",
+              "duration": "--:--",
+              "audioSource": "url"
+            },
+            {
+              "id": "c9-5-02",
+              "title": "Hindi Chapter 2",
+              "summary": "Add the audio summary and key points for Class 9 Hindi Chapter 2.",
+              "audio": "",
+              "duration": "--:--",
+              "audioSource": "url"
+            }
+          ]
+        },
+        {
+          "id": "c9-s6",
+          "name": "Computer",
+          "icon": "💻",
+          "chapters": [
+            {
+              "id": "c9-6-01",
+              "title": "Computer Chapter 1",
+              "summary": "Add the audio summary and key points for Class 9 Computer Chapter 1.",
+              "audio": "",
+              "duration": "--:--",
+              "audioSource": "url"
+            },
+            {
+              "id": "c9-6-02",
+              "title": "Computer Chapter 2",
+              "summary": "Add the audio summary and key points for Class 9 Computer Chapter 2.",
+              "audio": "",
+              "duration": "--:--",
+              "audioSource": "url"
             }
           ]
         }
@@ -288,65 +588,140 @@
       "short": "10",
       "subjects": [
         {
-          "id": "c10-english",
+          "id": "c10-s1",
           "name": "English",
           "icon": "📖",
           "chapters": [
             {
-              "id": "c10e-01",
-              "title": "A Letter to God",
-              "summary": "A concise overview of Lencho, his faith and the story's central idea.",
+              "id": "c10-1-01",
+              "title": "English Chapter 1",
+              "summary": "Add the audio summary and key points for Class 10 English Chapter 1.",
               "audio": "",
-              "duration": "--:--"
+              "duration": "--:--",
+              "audioSource": "url"
             },
             {
-              "id": "c10e-02",
-              "title": "Nelson Mandela: Long Walk to Freedom",
-              "summary": "Key ideas about freedom, courage, equality and responsibility.",
+              "id": "c10-1-02",
+              "title": "English Chapter 2",
+              "summary": "Add the audio summary and key points for Class 10 English Chapter 2.",
               "audio": "",
-              "duration": "--:--"
+              "duration": "--:--",
+              "audioSource": "url"
             }
           ]
         },
         {
-          "id": "c10-math",
+          "id": "c10-s2",
           "name": "Mathematics",
           "icon": "∑",
           "chapters": [
             {
-              "id": "c10m-01",
-              "title": "Real Numbers",
-              "summary": "Euclid's division algorithm, irrational numbers and decimal expansions.",
+              "id": "c10-2-01",
+              "title": "Mathematics Chapter 1",
+              "summary": "Add the audio summary and key points for Class 10 Mathematics Chapter 1.",
               "audio": "",
-              "duration": "--:--"
+              "duration": "--:--",
+              "audioSource": "url"
             },
             {
-              "id": "c10m-02",
-              "title": "Polynomials",
-              "summary": "Zeros of polynomials and the relationship between zeros and coefficients.",
+              "id": "c10-2-02",
+              "title": "Mathematics Chapter 2",
+              "summary": "Add the audio summary and key points for Class 10 Mathematics Chapter 2.",
               "audio": "",
-              "duration": "--:--"
+              "duration": "--:--",
+              "audioSource": "url"
             }
           ]
         },
         {
-          "id": "c10-science",
+          "id": "c10-s3",
           "name": "Science",
-          "icon": "🔬",
+          "icon": "⚗",
           "chapters": [
             {
-              "id": "c10s-01",
-              "title": "Chemical Reactions and Equations",
-              "summary": "Types of reactions, balancing equations and observable changes.",
+              "id": "c10-3-01",
+              "title": "Science Chapter 1",
+              "summary": "Add the audio summary and key points for Class 10 Science Chapter 1.",
               "audio": "",
-              "duration": "--:--"
+              "duration": "--:--",
+              "audioSource": "url"
             },
             {
-              "id": "c10s-02",
-              "title": "Acids, Bases and Salts",
-              "summary": "Properties, indicators, pH and common salts in daily life.",
+              "id": "c10-3-02",
+              "title": "Science Chapter 2",
+              "summary": "Add the audio summary and key points for Class 10 Science Chapter 2.",
               "audio": "",
-              "duration": "--:--"
+              "duration": "--:--",
+              "audioSource": "url"
+            }
+          ]
+        },
+        {
+          "id": "c10-s4",
+          "name": "Social Science",
+          "icon": "🌍",
+          "chapters": [
+            {
+              "id": "c10-4-01",
+              "title": "Social Science Chapter 1",
+              "summary": "Add the audio summary and key points for Class 10 Social Science Chapter 1.",
+              "audio": "",
+              "duration": "--:--",
+              "audioSource": "url"
+            },
+            {
+              "id": "c10-4-02",
+              "title": "Social Science Chapter 2",
+              "summary": "Add the audio summary and key points for Class 10 Social Science Chapter 2.",
+              "audio": "",
+              "duration": "--:--",
+              "audioSource": "url"
+            }
+          ]
+        },
+        {
+          "id": "c10-s5",
+          "name": "Hindi",
+          "icon": "अ",
+          "chapters": [
+            {
+              "id": "c10-5-01",
+              "title": "Hindi Chapter 1",
+              "summary": "Add the audio summary and key points for Class 10 Hindi Chapter 1.",
+              "audio": "",
+              "duration": "--:--",
+              "audioSource": "url"
+            },
+            {
+              "id": "c10-5-02",
+              "title": "Hindi Chapter 2",
+              "summary": "Add the audio summary and key points for Class 10 Hindi Chapter 2.",
+              "audio": "",
+              "duration": "--:--",
+              "audioSource": "url"
+            }
+          ]
+        },
+        {
+          "id": "c10-s6",
+          "name": "Computer",
+          "icon": "💻",
+          "chapters": [
+            {
+              "id": "c10-6-01",
+              "title": "Computer Chapter 1",
+              "summary": "Add the audio summary and key points for Class 10 Computer Chapter 1.",
+              "audio": "",
+              "duration": "--:--",
+              "audioSource": "url"
+            },
+            {
+              "id": "c10-6-02",
+              "title": "Computer Chapter 2",
+              "summary": "Add the audio summary and key points for Class 10 Computer Chapter 2.",
+              "audio": "",
+              "duration": "--:--",
+              "audioSource": "url"
             }
           ]
         }
