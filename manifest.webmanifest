@@ -1,9 +1,16 @@
 {
-  "name":"Sayeed Academy Audio Learning Pro",
-  "short_name":"Sayeed Academy",
-  "start_url":"./",
-  "display":"standalone",
-  "background_color":"#06101f",
-  "theme_color":"#07152f",
-  "icons":[{"src":"assets/icons/logo.png","sizes":"512x512","type":"image/png","purpose":"any maskable"}]
+  "name": "Sayeed Academy Audio Learning Pro v4",
+  "short_name": "Sayeed Academy",
+  "start_url": "./?v=4",
+  "display": "standalone",
+  "background_color": "#06101f",
+  "theme_color": "#07152f",
+  "icons": [
+    {
+      "src": "assets/icons/logo.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ]
 }
