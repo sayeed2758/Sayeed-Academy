@@ -3,12 +3,12 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
-<meta name="theme-color" content="#07152f"><meta name="app-version" content="4.0.0-full-fixed">
+<meta name="theme-color" content="#07152f"><meta name="app-version" content="5.0.0-full">
 <meta name="description" content="Sayeed Academy — premium chapter-wise audio learning for Classes 6 to 10.">
 <link rel="manifest" href="manifest.webmanifest">
 <link rel="icon" href="assets/icons/logo.png">
 <link rel="stylesheet" href="assets/css/style.css">
-<title>Sayeed Academy • Audio Learning Pro v4 FULL FIXED</title>
+<title>Sayeed Academy • Audio Learning Pro v5 FULL</title>
 </head>
 <body>
 <div class="app-shell">
@@ -24,6 +24,7 @@
       <button class="nav-item" data-view="library"><span>▦</span>Audio Library</button>
       <button class="nav-item" data-view="favorites"><span>★</span>Favorites</button>
       <button class="nav-item" data-view="history"><span>◷</span>Listening History</button>
+      <button class="nav-item" data-view="analytics"><span>◈</span>Analytics</button>
     </nav>
     <div class="sidebar-label">MANAGEMENT</div>
     <nav class="nav">
@@ -62,9 +63,11 @@
       <button class="player-star" id="playerFav" title="Favorite">☆</button>
     </div>
     <div class="player-controls">
-      <button class="small-control" id="back15">↶15</button>
+      <button class="small-control" id="prevPart" title="Previous part">⏮</button>
+      <button class="small-control" id="back15" title="Back 15 seconds">↶15</button>
       <button class="play-control" id="playPause">▶</button>
-      <button class="small-control" id="forward15">↷15</button>
+      <button class="small-control" id="forward15" title="Forward 15 seconds">↷15</button>
+      <button class="small-control" id="nextPart" title="Next part">⏭</button>
     </div>
     <div class="player-progress">
       <span id="currentTime">00:00</span>
