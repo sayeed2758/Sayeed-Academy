@@ -1,17 +1,12 @@
 {
-  "name": "Sayeed Academy \u2014 Audio Learning",
-  "short_name": "Sayeed Academy",
-  "start_url": "./",
-  "display": "standalone",
-  "background_color": "#f5f7fb",
-  "theme_color": "#071a3d",
-  "description": "Chapter-wise audio learning for Classes 6 to 10.",
-  "icons": [
-    {
-      "src": "./assets/icons/logo.png",
-      "sizes": "1536x1536",
-      "type": "image/png",
-      "purpose": "any maskable"
-    }
+  "name":"Sayeed Academy — Audio Learning",
+  "short_name":"Sayeed Academy",
+  "start_url":"./",
+  "display":"standalone",
+  "background_color":"#f5f7fb",
+  "theme_color":"#0b1220",
+  "icons":[
+    {"src":"assets/icons/logo.png","sizes":"192x192","type":"image/png"},
+    {"src":"assets/icons/logo.png","sizes":"512x512","type":"image/png"}
   ]
 }
